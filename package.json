@@ -1,0 +1,43 @@
+{
+  "name": "crud-with-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "preserve": "npm run build",
+    "dev": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/server.js\"",
+    "prestart": "npm run build",
+    "start": "cross-env NODE_ENV=production node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sujit-ss: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@github.com/sujit-ss/crud-with-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujit-ss/crud-with-express/issues"
+  },
+  "homepage": "https://github.com/sujit-ss/crud-with-express#readme",
+  "dependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.7",
+    "body-parser": "^1.19.1",
+    "cross-env": "^7.0.3",
+    "date-fns": "^2.28.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "helmet": "^5.0.0",
+    "mysql": "^2.18.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
