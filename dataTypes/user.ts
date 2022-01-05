@@ -5,4 +5,15 @@ export type User = {
   age: number;
   email: String;
   contact: String;
+  password: String;
 };
+
+export type UserLogin = {
+  email: String;
+  password: String;
+};
+
+export type jwtAlgorithem = {
+  id: String,
+  email: String,
+}

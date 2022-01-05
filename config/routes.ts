@@ -1,7 +1,7 @@
-const routes = {
+export const routes = {
   user: "/user",
   signup: "/signup",
   login: "/login",
+  logout: "/logout",
+  users: "/getUser",
 };
-
-module.exports = { routes };

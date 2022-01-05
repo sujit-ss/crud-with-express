@@ -1,6 +1,12 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const routes_1 = require("../config/routes");
 const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/userController");
-router.post("/signup", userController.signupUser);
+const { jwtAuthentication } = require("../middlewares/jwtAuthorization");
+router.post(routes_1.routes.signup, userController.signupUser);
+router.post(routes_1.routes.login, userController.loginUser);
+router.get(routes_1.routes.logout, jwtAuthentication, userController.logoutUser);
+router.get(routes_1.routes.users, jwtAuthentication, userController.getUserDetails);
 module.exports = router;

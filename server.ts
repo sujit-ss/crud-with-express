@@ -1,10 +1,10 @@
 import express, { Request, Response, Application } from "express";
+import { routes } from "./config/routes";
 
 const PORT = process.env.PORT || 8080;
 require("dotenv").config();
 const path = require("path");
 const { reqLogger } = require("./middlewares/logging");
-const { routes } = require("./config/routes");
 const app: Application = express();
 
 app.use(reqLogger);
